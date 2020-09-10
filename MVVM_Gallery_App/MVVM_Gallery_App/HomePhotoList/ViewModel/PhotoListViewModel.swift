@@ -25,7 +25,6 @@ class PhotoListViewModel {
             self.updateLoadingStatus?()
         }
     }
-    
     var alertMessage: String? {
         didSet {
             self.showAlertClosure?()
@@ -65,29 +64,6 @@ class PhotoListViewModel {
     func getCellViewModel( at indexPath: IndexPath ) -> CellInterface {
         return cellViewModels[indexPath.row]
     }
-    
-//    // parse objects service to a model
-//    func createCellViewModel( photo: Photo ) -> PhotoListCellViewModel {
-//
-//        //Wrap a description
-//        var descTextContainer: [String] = [String]()
-//        if let camera = photo.camera {
-//            descTextContainer.append(camera)
-//        }
-//        if let description = photo.description {
-//            descTextContainer.append( description )
-//        }
-//        let desc = descTextContainer.joined(separator: " - ")
-//
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd"
-//
-//        return PhotoListCellViewModel( titleText: photo.name,
-//                                       descText: desc,
-//                                       imageUrl: photo.image_url,
-//                                       dateText: dateFormatter.string(from: photo.created_at) )
-//    }
-//
     private func processFetchedPhoto( photos: [Photo] ) {
         self.photos = photos // Cache
         self.cellViewModels = photos.map{PhotoListCellViewModel(bsPhoto: $0)}
