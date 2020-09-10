@@ -1,0 +1,6 @@
+framework module Pods_MVVM_Gallery_App_MVVM_Gallery_AppUITests {
+  umbrella header "Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
