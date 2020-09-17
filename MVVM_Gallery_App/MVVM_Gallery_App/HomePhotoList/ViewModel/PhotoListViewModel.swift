@@ -10,9 +10,11 @@ import Foundation
 
 class PhotoListViewModel {
     
+    typealias Closure = () -> ()
+    
     let apiService: APIServiceProtocol
 
-    private var photos: [Photo] = [Photo]()
+    private(set) var photos: [Photo] = [Photo]()
     
     private var cellViewModels: [PhotoListCellViewModel] = [PhotoListCellViewModel]() {
         didSet {
@@ -20,12 +22,12 @@ class PhotoListViewModel {
         }
     }
 
-    var isLoading: Bool = false {
+    private(set) var isLoading: Bool = false {  // Activity indicator (start / end) and TableView (show / hide)
         didSet {
             self.updateLoadingStatus?()
         }
     }
-    var alertMessage: String? {
+    private(set) var alertMessage: String? { // Error message (Show / Hide)
         didSet {
             self.showAlertClosure?()
         }
@@ -36,15 +38,14 @@ class PhotoListViewModel {
     }
     
     var isAllowSegue: Bool = false
-    
     var selectedPhoto: Photo?
 
     // MARK: - Binding
-    var reloadTableViewClosure: (()->())?  // reload tableview
-    var showAlertClosure: (()->())?        // Show the AlertMessage
-    var updateLoadingStatus: (()->())?     // start and stop the service indicator
+    var reloadTableViewClosure: (Closure)?  // reload tableview
+    var showAlertClosure: (Closure)?        // Show the AlertMessage
+    var updateLoadingStatus: (Closure)?     // start and stop the service indicator
 
-    init( apiService: APIServiceProtocol = APIService()) {  // DI
+    init(apiService: APIServiceProtocol = APIService()) {  // DI
         self.apiService = apiService
     }
     
@@ -53,15 +54,14 @@ class PhotoListViewModel {
         apiService.fetchPopularPhoto { [weak self] (success, photos, error) in
             self?.isLoading = false // stop loading activity indicator
             if let error = error {
-                self?.alertMessage = error.rawValue // init the closure error message
+                self?.alertMessage = error.rawValue //
             } else {
                 self?.processFetchedPhoto(photos: photos)
             }
         }
     }
     
-    // get the object cell
-    func getCellViewModel( at indexPath: IndexPath ) -> CellInterface {
+    func getCellViewModel( at indexPath: IndexPath ) -> PhotoListCellProtocol {
         return cellViewModels[indexPath.row]
     }
     private func processFetchedPhoto( photos: [Photo] ) {
@@ -71,6 +71,7 @@ class PhotoListViewModel {
     
 }
 
+// MARK: - User Actions
 extension PhotoListViewModel {
     func userPressed( at indexPath: IndexPath ){
         let photo = self.photos[indexPath.row]
@@ -82,40 +83,5 @@ extension PhotoListViewModel {
             self.selectedPhoto = nil
             self.alertMessage = "This item is not for sale" // invoke show alertClosure
         }
-        
     }
-}
-
-protocol CellInterface {
-    var title : String { get }
-    var description : String { get }
-    var date : String {get}
-    var imgURL : String {get}
-}
-
-struct PhotoListCellViewModel: CellInterface {
-    private var bsPhoto : Photo
-    
-    init(bsPhoto : Photo) {
-        self.bsPhoto = bsPhoto
-    }
-    
-    var title : String {
-        return self.bsPhoto.name
-    }
-    
-    var description : String {
-        return "\(bsPhoto.camera ?? "") - \(bsPhoto.description ?? "")"
-    }
-    
-    var date : String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: bsPhoto.created_at)
-    }
-    
-    var imgURL : String{
-        return bsPhoto.image_url
-    }
-    
 }

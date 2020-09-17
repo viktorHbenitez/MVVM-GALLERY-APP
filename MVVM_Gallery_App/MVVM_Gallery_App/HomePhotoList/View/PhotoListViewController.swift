@@ -23,7 +23,7 @@ class PhotoListViewController: UIViewController {
         // Init the static view
         initView()
         // init view model
-        initVM()
+        initBind()
         
     }
     
@@ -34,7 +34,7 @@ class PhotoListViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
     }
     
-    func initVM() {
+    func initBind() {
         
         // Naive binding
         viewModel.showAlertClosure = { [weak self] () in
@@ -107,7 +107,6 @@ extension PhotoListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        
         self.viewModel.userPressed(at: indexPath)
         if viewModel.isAllowSegue {
             return indexPath
@@ -133,7 +132,7 @@ class PhotoListTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descContainerHeightConstraint: NSLayoutConstraint!
-    var photoListCellViewModel : CellInterface? {
+    var photoListCellViewModel : PhotoListCellProtocol? {
         didSet {
             nameLabel.text = photoListCellViewModel?.title
             descriptionLabel.text = photoListCellViewModel?.description

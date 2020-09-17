@@ -22,6 +22,8 @@
 		CD0C637C250ACF7A00451D0E /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C637B250ACF7A00451D0E /* PhotoListViewModel.swift */; };
 		CD0C6381250AD3EB00451D0E /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C6380250AD3EB00451D0E /* PhotoDetailViewController.swift */; };
 		CD0C6384250AD5A700451D0E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C6383250AD5A700451D0E /* Extension.swift */; };
+		CD6C980E251401D80072F586 /* PhotoListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C980D251401D80072F586 /* PhotoListCellViewModel.swift */; };
+		CD6C98112514022B0072F586 /* HomePhotoListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C98102514022B0072F586 /* HomePhotoListProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		CD0C637B250ACF7A00451D0E /* PhotoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		CD0C6380250AD3EB00451D0E /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		CD0C6383250AD5A700451D0E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CD6C980D251401D80072F586 /* PhotoListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCellViewModel.swift; sourceTree = "<group>"; };
+		CD6C98102514022B0072F586 /* HomePhotoListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoListProtocol.swift; sourceTree = "<group>"; };
 		E8BED677E594A377A95F99E7 /* Pods-MVVM_Gallery_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_Gallery_App.release.xcconfig"; path = "Target Support Files/Pods-MVVM_Gallery_App/Pods-MVVM_Gallery_App.release.xcconfig"; sourceTree = "<group>"; };
 		F69B0C1248DC60F1C629F03F /* Pods-MVVM_Gallery_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_Gallery_App.debug.xcconfig"; path = "Target Support Files/Pods-MVVM_Gallery_App/Pods-MVVM_Gallery_App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +163,7 @@
 		CD0C6373250ACDE700451D0E /* HomePhotoList */ = {
 			isa = PBXGroup;
 			children = (
+				CD6C980F2514020E0072F586 /* Protocols */,
 				CD0C6378250ACF5F00451D0E /* ViewModel */,
 				CD0C6377250ACF5A00451D0E /* View */,
 			);
@@ -184,6 +189,7 @@
 		CD0C6378250ACF5F00451D0E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CD6C980D251401D80072F586 /* PhotoListCellViewModel.swift */,
 				CD0C637B250ACF7A00451D0E /* PhotoListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -219,6 +225,14 @@
 				CD0C6383250AD5A700451D0E /* Extension.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		CD6C980F2514020E0072F586 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CD6C98102514022B0072F586 /* HomePhotoListProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,7 +423,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0C634D250ACB1200451D0E /* AppDelegate.swift in Sources */,
+				CD6C980E251401D80072F586 /* PhotoListCellViewModel.swift in Sources */,
 				CD0C6372250ACDC300451D0E /* APIService.swift in Sources */,
+				CD6C98112514022B0072F586 /* HomePhotoListProtocol.swift in Sources */,
 				CD0C6376250ACE8400451D0E /* photo.swift in Sources */,
 				CD0C634F250ACB1200451D0E /* SceneDelegate.swift in Sources */,
 				CD0C637A250ACF6B00451D0E /* PhotoListViewController.swift in Sources */,
