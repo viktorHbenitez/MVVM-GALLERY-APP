@@ -29,5 +29,4 @@ ViewModel flow
 ### Gallery App
 ![Version 1](https://github.com/viktorHbenitez//MVVM-GALLERY-APP/blob/master/Sketch/GalleryApp.png)  
 
-
 Reference  [Gallery App ](https://medium.com/flawless-app-stories/how-to-use-a-model-view-viewmodel-architecture-for-ios-46963c67be1b/)
