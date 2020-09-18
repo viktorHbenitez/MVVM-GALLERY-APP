@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5BC56040D82DFE863AC3843A /* Pods_MVVM_Gallery_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620733CEC253635C391C2C68 /* Pods_MVVM_Gallery_App.framework */; };
-		66A3A3DEEA73E975DA327031 /* Pods_MVVM_Gallery_App_MVVM_Gallery_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4526756F58CC632D221CBE1F /* Pods_MVVM_Gallery_App_MVVM_Gallery_AppUITests.framework */; };
 		CD0C634D250ACB1200451D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C634C250ACB1200451D0E /* AppDelegate.swift */; };
 		CD0C634F250ACB1200451D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C634E250ACB1200451D0E /* SceneDelegate.swift */; };
 		CD0C6354250ACB1200451D0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0C6352250ACB1200451D0E /* Main.storyboard */; };
 		CD0C6356250ACB1300451D0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0C6355250ACB1300451D0E /* Assets.xcassets */; };
 		CD0C6359250ACB1300451D0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0C6357250ACB1300451D0E /* LaunchScreen.storyboard */; };
-		CD0C6364250ACB1300451D0E /* MVVM_Gallery_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C6363250ACB1300451D0E /* MVVM_Gallery_AppUITests.swift */; };
 		CD0C6370250ACD8A00451D0E /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = CD0C636F250ACD8A00451D0E /* content.json */; };
 		CD0C6372250ACDC300451D0E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C6371250ACDC300451D0E /* APIService.swift */; };
 		CD0C6376250ACE8400451D0E /* photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C6375250ACE8400451D0E /* photo.swift */; };
@@ -24,10 +22,12 @@
 		CD0C6384250AD5A700451D0E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C6383250AD5A700451D0E /* Extension.swift */; };
 		CD6C980E251401D80072F586 /* PhotoListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C980D251401D80072F586 /* PhotoListCellViewModel.swift */; };
 		CD6C98112514022B0072F586 /* HomePhotoListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C98102514022B0072F586 /* HomePhotoListProtocol.swift */; };
+		CD6C981B251433D10072F586 /* MVVM_Gallery_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C981A251433D10072F586 /* MVVM_Gallery_AppTests.swift */; };
+		CD6C9823251434040072F586 /* PhotoListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C9822251434040072F586 /* PhotoListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CD0C6360250ACB1300451D0E /* PBXContainerItemProxy */ = {
+		CD6C981D251433D10072F586 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CD0C6341250ACB1200451D0E /* Project object */;
 			proxyType = 1;
@@ -48,9 +48,6 @@
 		CD0C6355250ACB1300451D0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0C6358250ACB1300451D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD0C635A250ACB1300451D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD0C635F250ACB1300451D0E /* MVVM_Gallery_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_Gallery_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD0C6363250ACB1300451D0E /* MVVM_Gallery_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Gallery_AppUITests.swift; sourceTree = "<group>"; };
-		CD0C6365250ACB1300451D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0C636F250ACD8A00451D0E /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
 		CD0C6371250ACDC300451D0E /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CD0C6375250ACE8400451D0E /* photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photo.swift; sourceTree = "<group>"; };
@@ -60,6 +57,10 @@
 		CD0C6383250AD5A700451D0E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CD6C980D251401D80072F586 /* PhotoListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCellViewModel.swift; sourceTree = "<group>"; };
 		CD6C98102514022B0072F586 /* HomePhotoListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoListProtocol.swift; sourceTree = "<group>"; };
+		CD6C9818251433D10072F586 /* MVVM_Gallery_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_Gallery_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6C981A251433D10072F586 /* MVVM_Gallery_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Gallery_AppTests.swift; sourceTree = "<group>"; };
+		CD6C981C251433D10072F586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6C9822251434040072F586 /* PhotoListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModelTests.swift; sourceTree = "<group>"; };
 		E8BED677E594A377A95F99E7 /* Pods-MVVM_Gallery_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_Gallery_App.release.xcconfig"; path = "Target Support Files/Pods-MVVM_Gallery_App/Pods-MVVM_Gallery_App.release.xcconfig"; sourceTree = "<group>"; };
 		F69B0C1248DC60F1C629F03F /* Pods-MVVM_Gallery_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_Gallery_App.debug.xcconfig"; path = "Target Support Files/Pods-MVVM_Gallery_App/Pods-MVVM_Gallery_App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,11 +74,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD0C635C250ACB1300451D0E /* Frameworks */ = {
+		CD6C9815251433D10072F586 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66A3A3DEEA73E975DA327031 /* Pods_MVVM_Gallery_App_MVVM_Gallery_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				CD0C634B250ACB1200451D0E /* MVVM_Gallery_App */,
-				CD0C6362250ACB1300451D0E /* MVVM_Gallery_AppUITests */,
+				CD6C9819251433D10072F586 /* MVVM_Gallery_AppTests */,
 				CD0C634A250ACB1200451D0E /* Products */,
 				70B091631F832E2668CC9831 /* Pods */,
 				941E1C7CDED2F2D4E26BAABA /* Frameworks */,
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				CD0C6349250ACB1200451D0E /* MVVM_Gallery_App.app */,
-				CD0C635F250ACB1300451D0E /* MVVM_Gallery_AppUITests.xctest */,
+				CD6C9818251433D10072F586 /* MVVM_Gallery_AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,15 +140,6 @@
 				CD0C635A250ACB1300451D0E /* Info.plist */,
 			);
 			path = MVVM_Gallery_App;
-			sourceTree = "<group>";
-		};
-		CD0C6362250ACB1300451D0E /* MVVM_Gallery_AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CD0C6363250ACB1300451D0E /* MVVM_Gallery_AppUITests.swift */,
-				CD0C6365250ACB1300451D0E /* Info.plist */,
-			);
-			path = MVVM_Gallery_AppUITests;
 			sourceTree = "<group>";
 		};
 		CD0C636E250ACD2800451D0E /* Service */ = {
@@ -235,6 +226,16 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		CD6C9819251433D10072F586 /* MVVM_Gallery_AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD6C981A251433D10072F586 /* MVVM_Gallery_AppTests.swift */,
+				CD6C9822251434040072F586 /* PhotoListViewModelTests.swift */,
+				CD6C981C251433D10072F586 /* Info.plist */,
+			);
+			path = MVVM_Gallery_AppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,25 +258,23 @@
 			productReference = CD0C6349250ACB1200451D0E /* MVVM_Gallery_App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CD0C635E250ACB1300451D0E /* MVVM_Gallery_AppUITests */ = {
+		CD6C9817251433D10072F586 /* MVVM_Gallery_AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD0C636B250ACB1300451D0E /* Build configuration list for PBXNativeTarget "MVVM_Gallery_AppUITests" */;
+			buildConfigurationList = CD6C981F251433D10072F586 /* Build configuration list for PBXNativeTarget "MVVM_Gallery_AppTests" */;
 			buildPhases = (
-				DBE604A929B281669038BB7F /* [CP] Check Pods Manifest.lock */,
-				CD0C635B250ACB1300451D0E /* Sources */,
-				CD0C635C250ACB1300451D0E /* Frameworks */,
-				CD0C635D250ACB1300451D0E /* Resources */,
-				277158C4995D92F1B357C27E /* [CP] Embed Pods Frameworks */,
+				CD6C9814251433D10072F586 /* Sources */,
+				CD6C9815251433D10072F586 /* Frameworks */,
+				CD6C9816251433D10072F586 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CD0C6361250ACB1300451D0E /* PBXTargetDependency */,
+				CD6C981E251433D10072F586 /* PBXTargetDependency */,
 			);
-			name = MVVM_Gallery_AppUITests;
-			productName = MVVM_Gallery_AppUITests;
-			productReference = CD0C635F250ACB1300451D0E /* MVVM_Gallery_AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = MVVM_Gallery_AppTests;
+			productName = MVVM_Gallery_AppTests;
+			productReference = CD6C9818251433D10072F586 /* MVVM_Gallery_AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -290,7 +289,7 @@
 					CD0C6348250ACB1200451D0E = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					CD0C635E250ACB1300451D0E = {
+					CD6C9817251433D10072F586 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = CD0C6348250ACB1200451D0E;
 					};
@@ -310,7 +309,7 @@
 			projectRoot = "";
 			targets = (
 				CD0C6348250ACB1200451D0E /* MVVM_Gallery_App */,
-				CD0C635E250ACB1300451D0E /* MVVM_Gallery_AppUITests */,
+				CD6C9817251433D10072F586 /* MVVM_Gallery_AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,7 +326,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD0C635D250ACB1300451D0E /* Resources */ = {
+		CD6C9816251433D10072F586 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,23 +336,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		277158C4995D92F1B357C27E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests/Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests/Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests/Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		74E018BD9558289FA39F51FB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,28 +375,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DBE604A929B281669038BB7F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -435,21 +395,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD0C635B250ACB1300451D0E /* Sources */ = {
+		CD6C9814251433D10072F586 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD0C6364250ACB1300451D0E /* MVVM_Gallery_AppUITests.swift in Sources */,
+				CD6C981B251433D10072F586 /* MVVM_Gallery_AppTests.swift in Sources */,
+				CD6C9823251434040072F586 /* PhotoListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CD0C6361250ACB1300451D0E /* PBXTargetDependency */ = {
+		CD6C981E251433D10072F586 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CD0C6348250ACB1200451D0E /* MVVM_Gallery_App */;
-			targetProxy = CD0C6360250ACB1300451D0E /* PBXContainerItemProxy */;
+			targetProxy = CD6C981D251433D10072F586 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -625,45 +586,43 @@
 			};
 			name = Release;
 		};
-		CD0C636C250ACB1300451D0E /* Debug */ = {
+		CD6C9820251433D10072F586 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2469C1664E46B15402C60B54 /* Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z723S6A3L;
-				INFOPLIST_FILE = MVVM_Gallery_AppUITests/Info.plist;
+				INFOPLIST_FILE = MVVM_Gallery_AppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bancoazteca.bancadigital.MVVM-Gallery-AppUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bancoazteca.bancadigital.MVVM-Gallery-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MVVM_Gallery_App;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM_Gallery_App.app/MVVM_Gallery_App";
 			};
 			name = Debug;
 		};
-		CD0C636D250ACB1300451D0E /* Release */ = {
+		CD6C9821251433D10072F586 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F3B63821FB258DABD803B29 /* Pods-MVVM_Gallery_App-MVVM_Gallery_AppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z723S6A3L;
-				INFOPLIST_FILE = MVVM_Gallery_AppUITests/Info.plist;
+				INFOPLIST_FILE = MVVM_Gallery_AppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bancoazteca.bancadigital.MVVM-Gallery-AppUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bancoazteca.bancadigital.MVVM-Gallery-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MVVM_Gallery_App;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM_Gallery_App.app/MVVM_Gallery_App";
 			};
 			name = Release;
 		};
@@ -688,11 +647,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD0C636B250ACB1300451D0E /* Build configuration list for PBXNativeTarget "MVVM_Gallery_AppUITests" */ = {
+		CD6C981F251433D10072F586 /* Build configuration list for PBXNativeTarget "MVVM_Gallery_AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD0C636C250ACB1300451D0E /* Debug */,
-				CD0C636D250ACB1300451D0E /* Release */,
+				CD6C9820251433D10072F586 /* Debug */,
+				CD6C9821251433D10072F586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

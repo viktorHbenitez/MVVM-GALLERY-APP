@@ -29,4 +29,12 @@ ViewModel flow
 ### Gallery App
 ![Version 1](https://github.com/viktorHbenitez//MVVM-GALLERY-APP/blob/master/Sketch/GalleryApp.jpg)  
 
+## Unit Testing
+
+We will cover to techniques:
+How to design a mock to simulate different network states
+How to use stubs to test user interaction
+
+
 Reference  [Gallery App ](https://medium.com/flawless-app-stories/how-to-use-a-model-view-viewmodel-architecture-for-ios-46963c67be1b/)
+Reference  [Unit Testing](https://medium.com/flawless-app-stories/applying-unit-tests-to-mvvm-with-swift-ba5a79df8a18)
