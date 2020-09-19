@@ -27,7 +27,7 @@ ViewModel flow
 ![Flow](https://github.com/viktorHbenitez//MVVM-GALLERY-APP/blob/master/Sketch/flow.png)  
 
 ### Gallery App
-![Version 1](https://github.com/viktorHbenitez//MVVM-GALLERY-APP/blob/master/Sketch/GalleryApp.jpg)  
+![Version App](https://github.com/viktorHbenitez/MVVM-GALLERY-APP/blob/master/Sketch/GalleryApp.jpg)  
 
 ## Unit Testing
 
