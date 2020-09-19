@@ -24,7 +24,7 @@ ViewModel flow
 
 
 ### Flow of the ViewModel
-![Flow Diagram](https://github.com/viktorHbenitez//MVVM-GALLERY-APP/blob/master/Sketch/flow.png)  
+![Flow Diagram](https://github.com/viktorHbenitez/MVVM-GALLERY-APP/blob/master/Sketch/flow.png)  
 
 ### Gallery App
 ![Version App](https://github.com/viktorHbenitez/MVVM-GALLERY-APP/blob/master/Sketch/GalleryApp.jpg)  
