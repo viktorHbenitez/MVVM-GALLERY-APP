@@ -33,7 +33,7 @@ class PhotoListViewModelTests: XCTestCase {
     }
     
      // USE CASE: ViewModel should display an error message if the request failed
-    func test_fetch_popular_photo_fail(){
+    func test_fetch_popular_photo_status_networking_fail(){
         
         // 1. Given a failed fetch with a certain failure
         let error = APIError.permissionDenied
@@ -46,6 +46,48 @@ class PhotoListViewModelTests: XCTestCase {
         // SUT (ViewModel) should display predefined error message
         XCTAssertEqual(sut.alertMessage, error.rawValue)
     }
+    
+    
+    /*
+       Use Case: Closure loading response when the store property  locading change
+       1. loading is false
+       2. Loading is true when the method service is called
+       3. Invoke  update loading status
+       4. Loading is false when the closure is invoked, it is already completed
+       */
+    func test_response_loading_when_fetching(){
+        
+        // GIVE A PREDICTION
+        var loadingStatus = false
+        
+        // Create expectation : you tell method test, you want to wait for a while before proceeding
+        let expectation = XCTestExpectation(description: "loading status updated")
+    
+        //  Change stats of loading variable
+        sut.updateLoadingStatus = { [weak sut] in
+            loadingStatus = sut!.isLoading
+            
+            // When it is finished, mark my expectation as being fulfilled, mark is  as completed
+            expectation.fulfill()
+        }
+        
+        // When is ViewModel run service client
+        sut.initFetch()
+        
+        // Assert is true
+        XCTAssertTrue(loadingStatus)
+        
+        // Change again to false
+        mockAPIService.fetchSuccess()
+        
+        //  Wait one second for all aoutstanding expectations to ve fulfilled
+        wait(for: [expectation], timeout: 1.0)
+        
+        // Assert return to false
+        XCTAssertFalse(loadingStatus)
+        
+    }
+    
     
     
     
@@ -85,6 +127,10 @@ class MockApiService : APIServiceProtocol{
         completedClosure?(false, CompletePhotos, error)
     }
     
+    
+    func fetchSuccess(){
+        completedClosure?(true, CompletePhotos, nil)
+    }
     
     
 }
