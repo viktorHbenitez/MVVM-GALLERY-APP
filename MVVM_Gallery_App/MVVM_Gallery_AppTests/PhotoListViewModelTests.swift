@@ -25,27 +25,26 @@ class PhotoListViewModelTests: XCTestCase {
         super.setUp()
     }
     
-    func test_fetch_photo_with_moking(){
+    func test_fetch_popular_photo_with_moking(){
         // we start fetch with Mocking Service
         sut.initFetch()
+        
         assert(mockAPIService.isFetchPopularPhotoFromClienteCalled)
-    
     }
     
-    func test_fetch_photo_fail(){
+     // USE CASE: ViewModel should display an error message if the request failed
+    func test_fetch_popular_photo_fail(){
         
-        // Given a failed fetch with a certain failure
+        // 1. Given a failed fetch with a certain failure
         let error = APIError.permissionDenied
         
-        // When
+        // 2. When
         sut.initFetch()
-        
         
         mockAPIService.fetchFail(error: error)
         
-        // Sut (ViewModel) should display predefined error message
+        // SUT (ViewModel) should display predefined error message
         XCTAssertEqual(sut.alertMessage, error.rawValue)
-        
     }
     
     
@@ -62,7 +61,7 @@ class PhotoListViewModelTests: XCTestCase {
  First Use Case: The PhotoListViewModel should fetch data from the API Service
  We successfully test the behavior of our ViewModel
  
- Second Use Case: Succes or Failure networking states by Changing the response of the MockAPIService.
+ Second Use Case: Success or Failure networking states by Changing the response of the MockAPIService.
  We also want to see if the PhotoListViewModel correnctly handles networking states.
  
  */

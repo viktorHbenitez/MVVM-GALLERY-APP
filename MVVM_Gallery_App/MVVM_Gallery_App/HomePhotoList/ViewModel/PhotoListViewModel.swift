@@ -51,7 +51,7 @@ class PhotoListViewModel {
     
     func initFetch() {
         self.isLoading = true // show the activity indicador
-        apiService.fetchPopularPhoto { [weak self] (success, photos, error) in
+        apiService.fetchPopularPhoto { [weak self] success, photos, error in
             self?.isLoading = false // stop loading activity indicator
             if let error = error {
                 self?.alertMessage = error.rawValue //

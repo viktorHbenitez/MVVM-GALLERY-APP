@@ -16,7 +16,7 @@ enum APIError: String, Error {
 
 protocol APIServiceProtocol {
     typealias  Closure = ( _ success: Bool, _ photos: [Photo], _ error: APIError? )->()
-    func fetchPopularPhoto( complete: @escaping ( _ success: Bool, _ photos: [Photo], _ error: APIError? )->() )
+    func fetchPopularPhoto( complete: @escaping Closure )
 }
 
 class APIService: APIServiceProtocol {
